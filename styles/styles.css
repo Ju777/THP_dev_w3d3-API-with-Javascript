@@ -1,18 +1,23 @@
-body {
-    
+.news-container{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(83, 83, 83);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom : 10px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(112, 112, 112);
 }
 
-.form{
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(62, 62, 62);
+.text-container{
+    /* border : 3px solid rgb(9, 190, 90); */
+}
+
+.image-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.error{
-    border : 2px solid red;
-}
-
-.success{
-    border : 3px solid rgb(9, 190, 90);
+img{
+    max-width: 100%;
+    /* max-height: 30%; */
 }
