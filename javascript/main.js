@@ -32,38 +32,34 @@ getArticlesThenCatch();
 
 // FIN
 
-
-
 // Affichage des articles de la 1ère méthode
 displayArticles = (articlesArray) => {
     let html = '';
-
+    
     articlesArray.map(article => {
-        // Création de la structure HTML pour afficher ces informations.
-        let htmlSegment =`
-        <div class="news-container align-items-center">
-            <div class="image-container">
-                <div class="p-3">
-                    ${article.title}
-                </div>
-                <div>
-                    <img src="${article.urlToImage}" alt="image" class="rounded-pill"/>
-                </div>       
+    // Création de la structure HTML pour afficher ces informations.
+    let htmlSegment =`
+    <div class="news-container align-items-center">
+        <div class="image-container">
+            <div class="p-3">
+                ${article.title}
             </div>
-
-            <div class="text-container">
-                <p class="p-3">${article.content}<br/>--> <a href=\"${article.url}\" >read more</a></p>
-                <p class="fs-6 fw-medium p-3" >by ${article.author} [${article.source.name}] | on ${article.publishedAt}</p>
-            </div>
+            <div>
+                <img src="${article.urlToImage}" alt="image" class="rounded-pill"/>
+            </div>       
         </div>
-            `
-        html += htmlSegment;
+
+        <div class="text-container">
+            <p class="p-3">${article.content}<br/>--> <a href=\"${article.url}\" >read more</a></p>
+            <p class="fs-6 fw-medium p-3" >by ${article.author} [${article.source.name}] | on ${article.publishedAt}</p>
+        </div>
+    </div>
+        `
+    html += htmlSegment;
     });
 
     const mainContainer = document.getElementById('main-container');
     mainContainer.innerHTML = html;
 } 
 
-getArticleProperties = (article) => {
-    return Object.keys(article);
-}
+
