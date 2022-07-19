@@ -37,21 +37,8 @@ getArticlesThenCatch();
 // Affichage des articles de la 1ère méthode
 displayArticles = (articlesArray) => {
     let html = '';
-    const properties = getArticleProperties(articlesArray[0]);
-    // console.log(properties);
 
     articlesArray.map(article => {
-        // Extraction des informations dans le but de les formatter en HTML.
-        let source = article.source.name;
-        let author = article.author;
-        let title = article.title;
-        let description = article.description;
-        let url = article.url;
-        let imageURL = article.urlToImage;
-        let publishingDate = article.publishedAt;
-        let content = article.content;
-        console.log(source, author, title, description, url, imageURL, publishingDate, content);
-
         // Création de la structure HTML pour afficher ces informations.
         let htmlSegment =`
         <div class="news-container align-items-center">
